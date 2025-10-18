@@ -1,0 +1,67 @@
+/* AartiGalleryPage.css */
+.aarti-gallery-page {
+  /* Inherits App.css layout */
+}
+
+.gallery-header {
+  text-align: center;
+  background-color: #fcf3e0; /* Light cream/yellow background */
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #f1c40f; /* Golden yellow border */
+}
+
+.gallery-header h2 {
+  color: #e74c3c; /* Red heading */
+  font-size: 3em;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.gallery-header p {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aarti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Ensure padding on sides */
+}
+
+/* Responsive adjustments for Aarti Gallery Page */
+@media (max-width: 992px) {
+  .gallery-header {
+    padding: 50px 20px;
+  }
+  .gallery-header h2 {
+    font-size: 2.5em;
+  }
+  .gallery-header p {
+    font-size: 1.1em;
+  }
+  .aarti-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-header {
+    padding: 40px 15px;
+  }
+  .gallery-header h2 {
+    font-size: 2em;
+  }
+  .gallery-header p {
+    font-size: 1em;
+  }
+  .aarti-grid {
+    grid-template-columns: 1fr; /* Stack cards on very small screens */
+    padding: 0 15px;
+  }
+}

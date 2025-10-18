@@ -1,0 +1,66 @@
+/* EventsPage.css */
+.events-page {
+  /* Inherits App.css layout */
+}
+
+.events-hero {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.55); /* Slightly darker overlay */
+  margin-bottom: 40px;
+}
+
+.events-hero-overlay {
+    z-index: 1;
+    max-width: 800px;
+}
+
+.events-hero-overlay h2 {
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.events-hero-overlay p {
+    font-size: 1.3em;
+    color: #f0f0f0;
+    font-weight: 300;
+}
+
+.upcoming-events, .past-events {
+    max-width: 1000px; /* Consistent max-width with About page */
+    margin: 0 auto 40px auto; /* Centered with bottom margin */
+    padding: 0 20px; /* Section padding handled by global section rule */
+}
+
+.upcoming-events h3, .past-events h3 {
+    color: #34495e; /* Dark blue/gray heading */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Larger min width for cards */
+    gap: 30px; /* Space between event cards */
+    margin-top: 25px;
+}
+
+.event-card {
+    background-color: white;
+    padding: 30px; /* More padding */
+    border-radius: 10px;
+        box-shadow: 0 4px 12}

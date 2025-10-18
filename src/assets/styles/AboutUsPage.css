@@ -1,0 +1,149 @@
+/* AboutUsPage.css */
+.about-us-page {
+  /* Inherits App.css layout */
+}
+
+.about-hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px; /* Space below hero section */
+  overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.about-hero-image {
+  width: 100%;
+  height: 450px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image covers the area */
+  filter: brightness(0.6); /* Darken image for better text contrast */
+  display: block; /* Remove extra space below image */
+  animation: zoomIn 1s ease-out; /* Subtle zoom animation */
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center content perfectly */
+  width: 90%; /* Max width for overlay content */
+  max-width: 800px;
+  z-index: 1;
+}
+
+.about-hero-overlay h2 {
+  font-size: 3.8em; /* Large, prominent heading */
+  color: white;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+}
+
+.about-content {
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Soft shadow */
+  border-radius: 10px;
+  padding: 50px;
+  max-width: 1000px; /* Wider content area */
+  margin: 0 auto 40px auto; /* Centered with bottom margin */
+}
+
+.about-content h3 {
+  color: #e74c3c; /* Red highlight for subheadings */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  color: #495057; /* Darker text for readability */
+  margin-bottom: 1.5em;
+  line-height: 1.7;
+}
+
+.about-content ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.about-content ul li {
+  position: relative;
+  padding-left: 30px; /* Space for custom bullet */
+  margin-bottom: 10px;
+  font-size: 1.05em;
+  color: #495057;
+}
+
+.about-content ul li::before {
+  content: '✓'; /* Custom checkmark bullet */
+  color: #28a745; /* Green checkmark */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.about-content img { /* If you add images within the content */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+  display: block;
+}
+
+/* Responsive adjustments for About Us Page */
+@media (max-width: 992px) {
+  .about-hero-image {
+    height: 380px;
+  }
+  .about-hero-overlay h2 {
+    font-size: 3em;
+  }
+  .about-content {
+    padding: 40px;
+  }
+  .about-content h3 {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-image {
+    height: 300px;
+  }
+  .about-hero-overlay h2 {
+    font-size: 2.5em;
+  }
+  .about-content {
+    padding: 30px;
+    margin: 0 auto 30px auto;
+  }
+  .about-content h3 {
+    font-size: 1.6em;
+  }
+  .about-content p, .about-content ul li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-image {
+    height: 250px;
+  }
+  .about-hero-overlay h2 {
+    font-size: 2em;
+  }
+  .about-content {
+    padding: 20px;
+  }
+  .about-content h3 {
+    font-size: 1.4em;
+  }
+}

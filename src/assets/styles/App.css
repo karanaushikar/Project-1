@@ -1,0 +1,34 @@
+/* App.css */
+/* This file is for global application-wide styles and layout. */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the app takes at least full viewport height */
+  overflow-x: hidden; /* Prevents horizontal scroll from overflowing content */
+}
+
+/* Base styling for main content area */
+main {
+  flex-grow: 1; /* Allows the main content to expand and push the footer to the bottom */
+  padding: 40px 0; /* Vertical padding for all main content areas */
+  max-width: 100%; /* Ensure main does not overflow */
+}
+
+/* Universal section padding and max-width for consistent content width */
+section {
+  padding: 40px 20px; /* Default padding for sections */
+  max-width: 1200px; /* Max width for content within sections */
+  margin: 0 auto; /* Center sections horizontally */
+  box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+/* Responsive adjustments for main/section padding */
+@media (max-width: 768px) {
+  main {
+    padding: 25px 0;
+  }
+  section {
+    padding: 25px 15px;
+  }
+}

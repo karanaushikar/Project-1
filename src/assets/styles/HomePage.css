@@ -1,0 +1,172 @@
+ /* HomePage.css */
+/* .home-page {
+  Inherits App.css display: flex and min-height
+} */
+
+/* Hero Section */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  animation: fadeIn 1s ease-out; /* Simple fade-in animation */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero-content {
+  max-width: 900px;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+.hero-content h1 {
+  font-size: 4.5em; /* Larger, more impactful */
+  margin-bottom: 25px;
+  color: white; /* Ensure heading is white */
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Subtle text shadow */
+}
+
+.hero-content p {
+  font-size: 1.6em;
+  margin-bottom: 40px;
+  color: #f0f0f0; /* Slightly off-white for body text */
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.hero-buttons .btn {
+  font-size: 1.2em;
+  padding: 15px 35px;
+  min-width: 180px;
+  border: 2px solid transparent; /* Base for border animation */
+}
+
+.hero-buttons .primary-btn {
+  background-color: #e74c3c; /* Red */
+}
+
+.hero-buttons .primary-btn:hover {
+  background-color: #c0392b;
+  border-color: white;
+}
+
+.hero-buttons .secondary-btn {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  color: white;
+  border-color: white;
+}
+
+.hero-buttons .secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Welcome Section */
+.welcome-section {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  padding: 50px;
+  text-align: center;
+  margin: -60px auto 40px auto; /* Pull it up into the hero section slightly */
+  position: relative;
+  z-index: 2; /* Ensure it overlaps the hero section */
+  max-width: 1000px;
+}
+
+.welcome-section h2 {
+  color: #e74c3c; /* Red highlight */
+  margin-bottom: 25px;
+  font-size: 2.5em;
+}
+
+.welcome-section p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 1.5em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustments for Home Page */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 3.5em;
+  }
+  .hero-content p {
+    font-size: 1.4em;
+  }
+  .welcome-section {
+    padding: 40px;
+    margin: -40px auto 30px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 450px;
+    padding: 80px 20px;
+  }
+  .hero-content h1 {
+    font-size: 2.8em;
+  }
+  .hero-content p {
+    font-size: 1.2em;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-buttons .btn {
+    width: 80%;
+    max-width: 300px;
+  }
+  .welcome-section {
+    padding: 30px;
+    margin: -30px auto 20px auto;
+  }
+  .welcome-section h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 350px;
+    padding: 60px 15px;
+  }
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+  .welcome-section {
+    padding: 20px;
+  }
+  .welcome-section h2 {
+    font-size: 1.8em;
+  }
+  .welcome-section p {
+    font-size: 0.9em;
+  }
+} 

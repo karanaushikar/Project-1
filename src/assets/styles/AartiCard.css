@@ -1,0 +1,84 @@
+/* AartiCard.css */
+.aarti-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  overflow: hidden; /* Ensures image corners are rounded */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex; /* For flexible content alignment */
+  flex-direction: column;
+}
+
+.aarti-card:hover {
+  transform: translateY(-8px); /* Lift effect */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Stronger shadow */
+}
+
+.aarti-image {
+  width: 100%;
+  height: 280px; /* Fixed height for consistent look */
+  object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+  border-bottom: 3px solid #f1c40f; /* Golden yellow border at the bottom of image */
+}
+
+.aarti-info {
+  padding: 25px;
+  flex-grow: 1; /* Allows info section to grow and push button down */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes button to the bottom if content is short */
+}
+
+.aarti-info h3 {
+  font-size: 1.6em;
+  margin-bottom: 12px;
+  color: #34495e; /* Dark blue/gray */
+  font-family: 'Playfair Display', serif;
+}
+
+.aarti-info p {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.view-details-button {
+  background-color: #e74c3c; /* Red primary button */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center; /* Center button within its flex container */
+  width: 80%; /* Make button a good width */
+  max-width: 200px;
+}
+
+.view-details-button:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments for Aarti Card */
+@media (max-width: 576px) {
+  .aarti-image {
+    height: 220px;
+  }
+  .aarti-info {
+    padding: 20px;
+  }
+  .aarti-info h3 {
+    font-size: 1.4em;
+  }
+  .aarti-info p {
+    font-size: 0.85em;
+  }
+  .view-details-button {
+    width: 90%;
+  }
+}

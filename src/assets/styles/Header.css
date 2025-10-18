@@ -1,0 +1,107 @@
+/* Header.css */
+.header {
+  background-color: #34495e; /* Dark blue/gray, a common color in traditional Indian attire/motifs */
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Slightly stronger shadow */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+.logo {
+  color: #f1c40f; /* Golden yellow for the logo for prominence */
+  text-decoration: none;
+  font-size: 1.8em;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  padding: 5px 0;
+  white-space: nowrap; /* Keep logo on one line */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 30px; /* Space between nav items */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 8px 0; /* Larger clickable area */
+  position: relative; /* For underline effect */
+  display: inline-block; /* Required for padding and width for ::after */
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f1c40f; /* Golden yellow underline */
+  transition: width 0.3s ease-out;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after { /* Add 'active' class for current page */
+  width: 100%;
+}
+
+/* Responsive adjustments for Header */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* Align logo to left, nav links below */
+    padding-bottom: 10px; /* Space between logo and nav links */
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%; /* Nav links take full width */
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    margin: 0; /* Reset margin for stacked items */
+    width: 100%; /* Each list item takes full width */
+  }
+
+  .nav-links a {
+    display: block; /* Make links block level for better tapping */
+    padding: 12px 10px; /* Increase padding for touch targets */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle separator */
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none; /* No border for the last item */
+  }
+
+  .nav-links a::after {
+    left: 10px; /* Adjust underline position for padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5em; /* Smaller logo on very small screens */
+  }
+}
