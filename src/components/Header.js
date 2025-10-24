@@ -5,20 +5,20 @@ const Header = () => {
     <header className="header">
       <nav className="navbar">
         <Link to="/" className="logo">
-          Ahilyanagar Gawali Samaj
+          अहिल्यानगर गवळी समाज ( सावरगाव ट्रस्ट )
         </Link>
         <ul className="nav-links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">मुख्यपृष्ठ</Link>
           </li>
           <li>
-            <Link to="/aartis">Aartis</Link>
+            <Link to="/aartis">आरती</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about">समाज</Link>
           </li>
           <li>
-            <Link to="/events">Events</Link>
+            <Link to="/events">बातम्या</Link>
           </li>
         </ul>
       </nav>

@@ -1,2 +1,157 @@
 
 
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background: #505d6b; /* Darker blue/grey */
+    color: #fff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: #77b300 3px solid; /* Green accent */
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #77b300; /* Green accent */
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px 0;
+}
+
+/* Hero Section Styles */
+#hero {
+    text-align: center;
+    padding: 40px 0;
+    background: #e2e2e2;
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* General Section Styles */
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h3 {
+    color: #505d6b;
+    border-bottom: 2px solid #77b300;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* News Item Styles */
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h3 {
+    color: #333;
+    border-bottom: none;
+    margin-bottom: 5px;
+}
+
+.news-date {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.news-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Aarti Preformatted Text Styles */
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: 'Times New Roman', serif; /* A more traditional font for Aarti */
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #505d6b;
+    text-align: center;
+    border-top: #77b300 3px solid;
+}

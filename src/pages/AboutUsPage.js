@@ -12,12 +12,12 @@ const AboutUsPage = () => {
         <section className="about-hero">
           <img src={CommunityImage} alt="Ahilyanagar Gawali Community" className="about-hero-image" />
           <div className="about-hero-overlay">
-            <h2>About Ahilyanagar Gawali Samaj</h2>
+            <h2></h2>
           </div>
         </section>
 
         <section className="about-content">
-          <h3>Our History and Mission</h3>
+          <h3>आमचा इतिहास </h3>
           <p>
             The Ahilyanagar Gawali Samaj was founded with the vision of uniting the Gawali community in Ahilyanagar and fostering a strong sense of identity and belonging. For generations, our community has thrived on shared values of devotion, hard work, and mutual support.
           </p>
