@@ -1,107 +1,285 @@
-/* Header.css */
-.header {
-  background-color: #34495e; /* Dark blue/gray, a common color in traditional Indian attire/motifs */
-  padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Slightly stronger shadow */
+/* ==========================
+HEADER
+========================== */
+
+.header{
+
+    background:#8B1E3F;
+
+    color:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.18);
+
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+.header-container{
+
+    height:70px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:0 20px;
+
 }
 
-.logo {
-  color: #f1c40f; /* Golden yellow for the logo for prominence */
-  text-decoration: none;
-  font-size: 1.8em;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  padding: 5px 0;
-  white-space: nowrap; /* Keep logo on one line */
+.menu-btn{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
+.logo{
+
+    text-decoration:none;
+
+    color:white;
+
 }
 
-.nav-links li {
-  margin-left: 30px; /* Space between nav items */
+.logo-title{
+
+    font-size:22px;
+
+    font-weight:bold;
+
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 500;
-  padding: 8px 0; /* Larger clickable area */
-  position: relative; /* For underline effect */
-  display: inline-block; /* Required for padding and width for ::after */
+.logo-subtitle{
+
+    color:#FFD36A;
+
+    font-size:13px;
+
 }
 
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #f1c40f; /* Golden yellow underline */
-  transition: width 0.3s ease-out;
+
+/* ==========================
+OVERLAY
+========================== */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:998;
+
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after { /* Add 'active' class for current page */
-  width: 100%;
+
+/* ==========================
+SIDE MENU
+========================== */
+
+.side-menu{
+
+    position:fixed;
+
+    left:-300px;
+
+    top:0;
+
+    width:280px;
+
+    height:100%;
+
+    background:white;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:5px 0 18px rgba(0,0,0,.18);
+
+    overflow-y:auto;
+
 }
 
-/* Responsive adjustments for Header */
-@media (max-width: 768px) {
-  .navbar {
+.side-menu.open{
+
+    left:0;
+
+}
+
+.menu-header{
+
+    background:#8B1E3F;
+
+    color:white;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.close-menu{
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.side-menu nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.side-menu nav a{
+
+    text-decoration:none;
+
+    color:#444;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #eee;
+
+    font-size:17px;
+
+    transition:.25s;
+
+}
+
+.side-menu nav a:hover{
+
+    background:#FFF6E8;
+
+    color:#8B1E3F;
+
+    padding-left:28px;
+
+}
+
+
+/* ==========================
+DESKTOP
+========================== */
+
+@media(min-width:992px){
+
+    .header-container{
+
+        height:80px;
+
+    }
+
+    .logo-title{
+
+        font-size:28px;
+
+    }
+
+    .logo-subtitle{
+
+        font-size:15px;
+
+    }
+
+}
+
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:600px){
+
+    .logo-title{
+
+        font-size:18px;
+
+    }
+
+    .logo-subtitle{
+
+        font-size:12px;
+
+    }
+
+}
+
+/* Ensure the side menu can push content to the bottom */
+.side-menu {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align logo to left, nav links below */
-    padding-bottom: 10px; /* Space between logo and nav links */
-  }
-
-  .logo {
-    margin-bottom: 15px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    width: 100%; /* Nav links take full width */
-    align-items: flex-start;
-  }
-
-  .nav-links li {
-    margin: 0; /* Reset margin for stacked items */
-    width: 100%; /* Each list item takes full width */
-  }
-
-  .nav-links a {
-    display: block; /* Make links block level for better tapping */
-    padding: 12px 10px; /* Increase padding for touch targets */
-    border-bottom: 1px solid rgba(255,255,255,0.1); /* Subtle separator */
-  }
-
-  .nav-links li:last-child a {
-    border-bottom: none; /* No border for the last item */
-  }
-
-  .nav-links a::after {
-    left: 10px; /* Adjust underline position for padding */
-  }
+    height: 100%;
 }
 
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.5em; /* Smaller logo on very small screens */
-  }
+/* Allow the navigation to take up available space */
+.menu-nav {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Styling for the bottom footer section */
+.menu-footer {
+    border-top: 1px solid #eee;
+    padding: 15px 0;
+    margin-top: auto; /* Pushes to bottom */
+    background-color: #f9f9f9; /* Light background to distinguish it */
+}
+
+.footer-link {
+    display: block;
+    padding: 12px 20px;
+    color: #d32f2f; /* Different color to stand out */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.footer-link:hover {
+    background-color: #fce4ec;
+}
+
+/* Specific styling for the feedback link if you want it to look different */
+.feedback-link {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Location link slightly more prominent */
+.location-link {
+    color: #1a73e8; /* Google Maps Blue */
 }

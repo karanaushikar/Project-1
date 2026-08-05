@@ -1,67 +1,91 @@
-/* AartiGalleryPage.css */
-.aarti-gallery-page {
-  /* Inherits App.css layout */
-}
-
-.gallery-header {
-  text-align: center;
-  background-color: #fcf3e0; /* Light cream/yellow background */
-  padding: 60px 20px;
-  margin-bottom: 40px;
-  border-bottom: 3px solid #f1c40f; /* Golden yellow border */
-}
-
-.gallery-header h2 {
-  color: #e74c3c; /* Red heading */
-  font-size: 3em;
-  margin-bottom: 15px;
-  font-family: 'Playfair Display', serif;
-}
-
-.gallery-header p {
-  font-size: 1.2em;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.aarti-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px; /* Space between cards */
+.aarti-page-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px; /* Ensure padding on sides */
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* Responsive adjustments for Aarti Gallery Page */
-@media (max-width: 992px) {
-  .gallery-header {
-    padding: 50px 20px;
-  }
-  .gallery-header h2 {
-    font-size: 2.5em;
-  }
-  .gallery-header p {
-    font-size: 1.1em;
-  }
-  .aarti-grid {
-    gap: 25px;
-  }
+.aarti-box {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+/* Tabs */
+
+.aarti-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  background: #34495e;
+}
+
+.aarti-tab {
+  padding: 15px 25px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.aarti-tab:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.aarti-tab.active {
+  background: #f1c40f;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Content */
+
+.aarti-content {
+  padding: 40px 25px;
+}
+
+.aarti-content h2 {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.aarti-lyrics {
+  text-align: center;
+}
+
+.aarti-lyrics p {
+  margin: 8px 0;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Mobile */
 
 @media (max-width: 768px) {
-  .gallery-header {
-    padding: 40px 15px;
+
+  .aarti-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
   }
-  .gallery-header h2 {
-    font-size: 2em;
+
+  .aarti-tab {
+    white-space: nowrap;
+    flex-shrink: 0;
   }
-  .gallery-header p {
-    font-size: 1em;
+
+  .aarti-content {
+    padding: 25px 15px;
   }
-  .aarti-grid {
-    grid-template-columns: 1fr; /* Stack cards on very small screens */
-    padding: 0 15px;
+
+  .aarti-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .aarti-lyrics p {
+    font-size: 1rem;
   }
 }

@@ -1,38 +1,287 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
-import HomeHeroImage from '../assets/images/home-hero.jpg'; // Import the image
-// import '../assets/styles/HomePage.css'; // Uncomment and create this file for styling
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+import HomeHeroImage from "../assets/images/home-hero.jpg";
+import "../assets/styles/HomePage.css";
+import Newspaper from "../assets/images/newspaper.png";
 
 const HomePage = () => {
+
+  const latestNews = [
+    {
+      title: "कार्यकारिणी बैठक",
+      date: "९ ऑगस्ट २०२६"
+    }
+  ];
+
+  const upcomingEvents = [
+    
+{
+   title:"महाप्रसाद",
+   day: "१२",
+   month:"ऑगस्ट",
+   description:"दर अमावस्या",
+   location:"ब्रह्मसिद्धेश्वर मंदिर सावरगाव"
+},
+{
+   title:"गादीपूजा आणि भंडारा",
+   day: "३१",
+   month:"ऑगस्ट",
+   location:"ब्रह्मसिद्धेश्वर मंदिर सावरगाव"
+}
+    
+  ];
+
   return (
+
     <div className="home-page">
+
       <Header />
+
       <main>
-        <section className="hero-section" style={{ backgroundImage: `url(${HomeHeroImage})` }}>
+
+        {/* HERO */}
+
+        <section
+          className="hero-section"
+          style={{ backgroundImage: `url(${HomeHeroImage})` }}
+        >
+
           <div className="hero-content">
-            <h1>अहिल्यानगर गवळी समाज</h1>
-            <p>Preserving Culture, Fostering Unity</p>
+
+            <h1>वीरशैव लिंगायत गवळी समाज, अहिल्यानगर</h1>
+
+            <p>
+              धर्म • संस्कृती • सेवा
+            </p>
+
             <div className="hero-buttons">
-              <Link to="/aartis" className="btn primary-btn">आरती</Link>
-              <Link to="/about" className="btn secondary-btn">गवळी समाज</Link>
+
+              <Link
+                to="/aartis"
+                className="hero-btn"
+              >
+                🙏 आरती
+              </Link>
+
+              <Link
+                to="/events"
+                className="hero-btn"
+              >
+                📰 बातम्या
+              </Link>
+
+              <Link
+                to="/about"
+                className="hero-btn"
+              >
+                🛕 ट्रस्ट
+              </Link>
+
             </div>
+
           </div>
+
         </section>
 
-        <section className="welcome-section">
-          <h2>अहिल्यानगर गवळी समाजात आपले स्वागत आहे</h2>
+        {/* Today's Message */}
+
+        <section className="message-section">
+
+          <h2>🙏 आजचा सुविचार</h2>
+
           <p>
-            अहिल्यानगर गवळी समाज हा एक उत्साही समुदाय आहे जो आपला समृद्ध सांस्कृतिक वारसा जपण्यासाठी, सामाजिक कल्याणाला चालना देण्यासाठी आणि आपल्या सदस्यांमध्ये एकता वाढवण्यासाठी समर्पित आहे. प्रगती स्वीकारताना आपल्या परंपरा जपण्यावर आमचा विश्वास आहे.
+
+            "समाजाची सेवा हीच खरी ईश्वरसेवा."
+
           </p>
-          <p>
-विविध कार्यक्रम, सांस्कृतिक कार्यक्रम आणि सामुदायिक उपक्रमांद्वारे, आम्ही सर्वांसाठी एक सहाय्यक आणि आकर्षक वातावरण निर्माण करण्याचा प्रयत्न करतो.          </p>
+
         </section>
+
+         {/* Trust */}
+
+        <section className="trust-section">
+
+          <h2>
+
+            🛕 सावरगाव ट्रस्ट
+
+          </h2>
+
+          <p>
+
+            सावरगाव ट्रस्ट समाजाच्या धार्मिक,
+            सांस्कृतिक व सामाजिक कार्यासाठी
+            समर्पित आहे. विविध धार्मिक
+            कार्यक्रम, समाजहिताचे उपक्रम
+            ट्रस्टमार्फत राबविण्यात
+            येतात.
+
+          </p>
+
+          <Link
+            to="/about"
+            className="trust-btn"
+          >
+
+            अधिक माहिती
+
+          </Link>
+
+        </section>
+
+        {/* Events */}
+
+<section className="home-section">
+
+  <div className="section-header">
+
+    <h2>📅 आगामी कार्यक्रम</h2>
+
+    <Link to="/events" className="view-all-btn">
+      सर्व कार्यक्रम →
+    </Link>
+
+  </div>
+
+  <div className="card-grid">
+
+    {upcomingEvents.map((event, index) => (
+
+      <div
+        key={index}
+        className="event-home-card"
+      >
+
+        <div className="event-date-box">
+
+          <span className="event-day">
+            {event.day}
+          </span>
+
+          <span className="event-month">
+            {event.month}
+          </span>
+
+        </div>
+
+        <div className="event-details">
+
+          <h3>{event.title}</h3>
+
+          <p>{event.description}</p>
+
+          <span className="event-location">
+            📍 {event.location}
+          </span>
+
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
+
+        {/* Latest News */}
+
+        <section className="home-section">
+
+          <div className="section-header">
+
+            <h2><img  className="newsicon" src={Newspaper}/> नवीन बातम्या</h2>
+
+            <Link to="/events">
+
+              सर्व पहा →
+
+            </Link>
+
+          </div>
+
+          <div className="card-grid">
+
+            {latestNews.map((news, index) => (
+
+              <div
+                key={index}
+                className="home-card"
+              >
+
+                <h3>{news.title}</h3>
+
+                <span>{news.date}</span>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </section>
+
+        {/* Quick Aarti */}
+
+        <section className="home-section">
+
+          <h2>
+
+            🙏 दैनंदिन आरती
+
+          </h2>
+
+          <div className="aarti-buttons">
+
+            <Link to="/aartis">गणपती</Link>
+
+            <Link to="/aartis">शिव</Link>
+
+            <Link to="/aartis">विठ्ठल</Link>
+
+            <Link to="/aartis">हनुमान</Link>
+
+          </div>
+
+        </section>
+
+        {/* Gallery */}
+
+        {/* <section className="gallery-preview"> */}
+
+          {/* <h2>
+
+            📷 फोटो गॅलरी
+
+          </h2>
+
+          <p>
+
+            समाजातील कार्यक्रमांचे फोटो पाहा.
+
+          </p> */}
+
+          {/* <Link
+            to="/gallery"
+            className="trust-btn"
+          >
+
+            गॅलरी पहा
+
+          </Link> */}
+
+        {/* </section> */}
+
       </main>
+
       <Footer />
+
     </div>
+
   );
+
 };
 
 export default HomePage;
