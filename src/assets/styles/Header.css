@@ -130,7 +130,7 @@ SIDE MENU
 
     background:#8B1E3F;
 
-    color:white;
+    color:rgb(255, 250, 250);
 
     padding:20px;
 
@@ -140,6 +140,12 @@ SIDE MENU
 
     align-items:center;
 
+    
+
+}
+
+.header-text{
+    color: #f3f1f0;
 }
 
 .close-menu{

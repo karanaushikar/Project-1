@@ -25,7 +25,7 @@ const Header = () => {
                             वीरशैव लिंगायत गवळी समाज, अहिल्यानगर
                         </div>
                         <div className="logo-subtitle">
-                            ब्रह्मसिद्धेश्वर सावरगाव ट्रस्ट
+                            ब्रह्मसिद्धेश्वर ट्रस्ट, सावरगाव 
                         </div>
                     </Link>
                 </div>
@@ -40,7 +40,7 @@ const Header = () => {
 
             <div className={`side-menu ${menuOpen ? "open" : ""}`}>
                 <div className="menu-header">
-                    <h2>🙏 सावरगाव ट्रस्ट</h2>
+                    <h2 className="header-text">🙏 ब्रह्मसिद्धेश्वर ट्रस्ट</h2>
                     <button
                         className="close-menu"
                         onClick={closeMenu}
