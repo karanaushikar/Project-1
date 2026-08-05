@@ -192,7 +192,7 @@ const HomePage = () => {
 
           <div className="section-header">
 
-            <h2><img  className="newsicon" src={Newspaper}/> नवीन बातम्या</h2>
+            <h2><img  className="newsicon" alt="" src={Newspaper}/> नवीन बातम्या</h2>
 
             <Link to="/events">
 

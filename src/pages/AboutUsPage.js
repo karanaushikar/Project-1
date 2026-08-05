@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import CommunityImage from "../assets/images/ahilyanagar-community.jpg";
-
 import "../assets/styles/AboutUsPage.css";
 
 
