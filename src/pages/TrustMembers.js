@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import PlaceholderImage from "../assets/images/placeholder.png";
 import SantoshAushikar from "../assets/images/SantoshAushikar.jpg";
-import AppasahebHarba from "../assets/images/AppasahebHarba1.jpg";
+import AppasahebBarse from "../assets/images/AppasahebBarse.jpg";
 import BhausahebHucche from "../assets/images/BhausahebHucche.jpg";
 import ParojiGondhale from "../assets/images/Paroji Gondhale.jpg";
 import SadashivChavandke from "../assets/images/SadashivChavandke1.jpg";
@@ -39,7 +39,7 @@ const trustees = [
   },
   {
     name: "श्री. आप्पासाहेब बारशे",
-    image: PlaceholderImage,
+    image: AppasahebBarse,
   },
   {
     name: "श्री. बाळासाहेब सुंदराप्पा मिसाळ",
@@ -70,7 +70,7 @@ const trustees = [
 const pastMembers = [
   {
     name: "कै. आप्पासाहेब भाऊसाहेब हरबा",
-    image: AppasahebHarba,
+    image: PlaceholderImage,
   },
 
   {
