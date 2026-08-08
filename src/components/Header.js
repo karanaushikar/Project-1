@@ -58,6 +58,10 @@ const Header = () => {
                         🛕 आमच्याविषयी
                     </Link>
 
+                    <Link to="/samaj-history" onClick={closeMenu}>
+                        👥 समाज माहिती
+                    </Link>
+
                     <Link to="/events" onClick={closeMenu}>
                         📰 बातम्या
                     </Link>
