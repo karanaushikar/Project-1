@@ -11,6 +11,7 @@ import SagarGondhale from "../assets/images/SagarGondhale.jpg";
 import SanjayGenappa from "../assets/images/SanjayGenappa.jpg";
 import SomnathShahpurkar from "../assets/images/SomnathShahapurkar.jpg";
 import SatishHarba from "../assets/images/SatishHarba.png";
+import BalasahebMisal from "../assets/images/BalasahebMisal.jpg"
 import "../assets/styles/AboutUsPage.css";
 const TrustMembers = () => {
 
@@ -43,7 +44,7 @@ const trustees = [
   },
   {
     name: "श्री. बाळासाहेब सुंदराप्पा मिसाळ",
-    image: PlaceholderImage,
+    image: BalasahebMisal,
   },
   {
     name: "श्री. संजय सटाप्पा गेनाप्पा",
