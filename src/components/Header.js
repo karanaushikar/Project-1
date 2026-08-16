@@ -73,6 +73,7 @@ const Header = () => {
                     <Link to="/TrustMembers" onClick={closeMenu}>
                         👤 ट्रस्ट कार्यकारिणी
                     </Link>
+
                 </nav>
 
                 {/* New Footer Section for Location and Feedback */}
