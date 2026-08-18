@@ -7,16 +7,7 @@ import TempleImg3 from "../assets/images/TempleImg3.jpg";
 import "../assets/styles/EventsPage.css";
 
 const newsData = [
-  {
-    id: 1,
-    title: "समाज कार्यकारिणी बैठक",
-    date: "2026-08-09",
-    category: "बैठक",
-    featured: false,
-    image: EventBannerImage,
-    summary: "मासिक कार्यकारिणी बैठक आयोजित",
-    additionalImages: []
-  },
+  
   {
     id: 2,
     title: "गादीपूजा आणि भंडारा",

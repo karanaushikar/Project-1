@@ -8,22 +8,16 @@ import Newspaper from "../assets/images/newspaper.png";
 
 const HomePage = () => {
 
-  const latestNews = [
-    {
-      title: "कार्यकारिणी बैठक",
-      date: "९ ऑगस्ट २०२६"
-    }
-  ];
+  // const latestNews = [
+  //   {
+  //     title: "कार्यकारिणी बैठक",
+  //     date: "९ ऑगस्ट २०२६"
+  //   }
+  // ];
 
   const upcomingEvents = [
     
-{
-   title:"महाप्रसाद",
-   day: "१२",
-   month:"ऑगस्ट",
-   description:"दर अमावस्या",
-   location:"ब्रह्मसिद्धेश्वर मंदिर सावरगाव"
-},
+
 {
    title:"गादीपूजा आणि भंडारा",
    day: "३१",
@@ -186,7 +180,7 @@ const HomePage = () => {
 
 </section>
 
-        {/* Latest News */}
+        {/* Latest News
 
         <section className="home-section">
 
@@ -221,7 +215,7 @@ const HomePage = () => {
 
           </div>
 
-        </section>
+        </section> */}
 
         {/* Quick Aarti */}
 
