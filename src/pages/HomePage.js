@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import HomeHeroImage from "../assets/images/home-hero.jpg";
 import "../assets/styles/HomePage.css";
-import Newspaper from "../assets/images/newspaper.png";
+// import Newspaper from "../assets/images/newspaper.png";
 
 const HomePage = () => {
 
