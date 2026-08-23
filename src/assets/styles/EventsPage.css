@@ -678,3 +678,53 @@
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* Contributor styling on the card face */
+.card-contributors {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: default; /* Mouse won't change to pointer over names */
+}
+
+.contributor-label {
+  font-size: 0.8rem;
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.contributor-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mini-badge {
+  background-color: #fdf2f2;
+  color: #555;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 15px;
+  border: 1px solid #f9e1e1;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+/* Featured section tweaks */
+.featured-content .card-contributors {
+  margin: 15px 0;
+}
+
+/* Animations */
+.expanded-area {
+  margin-top: 15px;
+  border-top: 1px dashed #eee;
+  padding-top: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

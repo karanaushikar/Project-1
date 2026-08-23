@@ -74,6 +74,10 @@ const Header = () => {
                         👤 ट्रस्ट कार्यकारिणी
                     </Link>
 
+                    <Link to="/Contributor" onClick={closeMenu}>
+                        🤝 विशेष योगदान
+                    </Link>
+
                 </nav>
 
                 {/* New Footer Section for Location and Feedback */}

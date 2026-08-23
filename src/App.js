@@ -7,6 +7,7 @@ import EventsPage from './pages/EventsPage';
 import TrustMember from './pages/TrustMembers';
 import ScrollToTop from './components/ScrollToTop';
 import SamajInfoPage from './pages/SamajInfoPage';
+import Contributor from './pages/Contributors';
 // import './assets/styles/App.css'; // Uncomment and create this file for global styles
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/samaj-history" element={<SamajInfoPage/>} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/TrustMembers" element={<TrustMember/>}/>
+          <Route path="/Contributor" element={<Contributor/>}/>
           {/* Add a catch-all route for 404 if needed */}
           {/* <Route path="*" element={<div>404 Not Found</div>} /> */}
         </Routes>

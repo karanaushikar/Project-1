@@ -5,7 +5,6 @@ import PlaceholderImage from "../assets/images/placeholder.png";
 import SantoshAushikar from "../assets/images/SantoshAushikar.jpg";
 import AppasahebBarse from "../assets/images/AppasahebBarse.jpg";
 import BhausahebHucche from "../assets/images/BhausahebHucche.jpg";
-import ParojiGondhale from "../assets/images/Paroji Gondhale.jpg";
 import SadashivChavandke from "../assets/images/SadashivChavandke1.jpg";
 import SagarGondhale from "../assets/images/SagarGondhale.jpg";
 import SanjayGenappa from "../assets/images/SanjayGenappa.jpg";
@@ -104,10 +103,7 @@ const pastMembers = [
     image: PlaceholderImage,
   },
 
-   {
-    name: "कै. पारोजी घुमाजी गोंधळे",
-    image: ParojiGondhale,
-  },
+  
 
 ];
 
