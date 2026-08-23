@@ -13,7 +13,7 @@ const contributorsData = [
 ]
 
 const Contributors = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
 
   // Filter contributors based on search input
   const filteredContributors = contributorsData.filter((person) =>
