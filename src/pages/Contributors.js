@@ -49,7 +49,7 @@ const Contributors = () => {
                     <span className="quote-icon">"</span>
                   </p>
                   {/* Only show date if it exists */}
-                  {person.date && <span className="contribution-date">📅 {person.date}</span>}
+                  {person.date && <span className="contribution-date"> {person.date}</span>}
                 </div>
               </div>
             ))
