@@ -16,9 +16,9 @@ const Contributors = () => {
   // const [searchTerm, setSearchTerm] = useState("");
 
   // Filter contributors based on search input
-  const filteredContributors = contributorsData.filter((person) =>
-    person.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // const filteredContributors = contributorsData.filter((person) =>
+  //   person.name.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
 
   return (
     <div className="contributors-page">
