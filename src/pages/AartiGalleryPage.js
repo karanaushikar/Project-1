@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../assets/styles/AartiGalleryPage.css';
@@ -386,10 +387,37 @@ const aartisData = [
 
 const AartiGalleryPage = () => {
   const [selectedAartiId, setSelectedAartiId] = useState(1);
+  const location = useLocation();
+
+  // Effect to catch ID from Home Page Link and update tab
+   useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const id = params.get('id');
+    
+    if (id) {
+      const numericId = Number(id);
+      setSelectedAartiId(numericId);
+
+      // We use a small timeout to wait for the page to load/render
+      setTimeout(() => {
+        const activeTab = document.getElementById(`tab-${numericId}`);
+        if (activeTab) {
+          activeTab.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest', // Keeps it within the tab bar
+            inline: 'center'  // Centers the tab in the scroll view
+          });
+        }
+        // Also scroll the main window to the top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location]);
 
   const selectedAarti = aartisData.find(
     (aarti) => aarti.id === selectedAartiId
   );
+
 
   return (
     <div className="aarti-gallery-page">
@@ -403,6 +431,7 @@ const AartiGalleryPage = () => {
             {aartisData.map((aarti) => (
               <button
                 key={aarti.id}
+                 id={`tab-${aarti.id}`}
                 className={`aarti-tab ${
                   selectedAartiId === aarti.id ? 'active' : ''
                 }`}
@@ -413,20 +442,16 @@ const AartiGalleryPage = () => {
             ))}
           </div>
 
-          <div className="aarti-content">
-
-            <h2>{selectedAarti.title}</h2>
-
+         <div className="aarti-content">
+            <h2>{selectedAarti ? selectedAarti.title : "निवड करा"}</h2>
             <div className="aarti-lyrics">
-              {selectedAarti.lyrics.split('\n').map((line, index) => (
+              {selectedAarti && selectedAarti.lyrics.trim().split('\n').map((line, index) => (
                 <p key={index}>{line}</p>
               ))}
             </div>
-
           </div>
 
         </div>
-
       </main>
 
       <Footer />

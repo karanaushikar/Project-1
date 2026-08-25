@@ -35,7 +35,7 @@ const AboutUsPage = () => {
        
 
         {/* Information Section */}
-        <section className="contact-grid"> <div className="contact-card"> <h2>📍 पत्ता</h2> <p> ब्रह्मसिद्धेश्वर ट्रस्ट कार्यालय,<br /> अहिल्यानगर,<br /> महाराष्ट्र </p> </div> 
+        <section className="contact-grid"> <div className="contact-card"> <h2>📍 पत्ता</h2> <p>श्री ब्रह्मसिद्धेश्वर मंदिर, सावरगाव, <br />  आष्टी, बीड – ४१४२०३,<br /> महाराष्ट्र </p> </div> 
         {/*<div className="contact-card"> <h2>🕒 दर्शन वेळ</h2> <p> सकाळ <br /> ६:०० ते १२:०० </p> <p> संध्याकाळ <br /> ५:०० ते ९:०० </p> </div>*/} </section>
 
         

@@ -11,6 +11,8 @@ import SanjayGenappa from "../assets/images/SanjayGenappa.jpg";
 import SomnathShahpurkar from "../assets/images/SomnathShahapurkar.jpg";
 import SatishHarba from "../assets/images/SatishHarba.png";
 import BalasahebMisal from "../assets/images/BalasahebMisal.jpg"
+import UmeshDahinde from "../assets/images/UmeshDahinde.jpeg"
+import AppasahebHarba from "../assets/images/AppasahebHarba.jpeg"
 import "../assets/styles/AboutUsPage.css";
 const TrustMembers = () => {
 
@@ -28,7 +30,7 @@ const TrustMembers = () => {
   {
     name: "श्री. उमेश लक्ष्मण दहिंडे",
     role: "खजिनदार",
-    image: PlaceholderImage,
+    image: UmeshDahinde,
   },
 ];
 
@@ -70,7 +72,7 @@ const trustees = [
 const pastMembers = [
   {
     name: "कै. आप्पासाहेब भाऊसाहेब हरबा",
-    image: PlaceholderImage,
+    image: AppasahebHarba,
   },
 
   {

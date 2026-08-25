@@ -17,12 +17,29 @@ const HomePage = () => {
 
   const upcomingEvents = [
     {
-      id: 2, // Matches ID in EventsPage
+      id: 1, // Matches ID in EventsPage
       title: "गादीपूजा आणि भंडारा",
       day: "३१",
       month: "ऑगस्ट",
       location: "ब्रह्मसिद्धेश्वर मंदिर सावरगाव",
-      description: "वार्षिक गादीपूजा व महाप्रसाद सोहळा."
+      description: ""
+    },
+    {
+      id: 2, // Matches ID in EventsPage
+      title: "बीज उत्सव",
+      day: "१३",
+      month: "सप्टेंबर",
+      location: "सिदाजी आप्पा मंदिर, सारस नगर",
+      description: ""
+    },
+    {
+      id: 3, // Matches ID in EventsPage
+      title: "अमावस्या भंडारा",
+      month: (<>
+        <p style={{textAlign: "center" }}>दर <br/> अमावस्या</p>
+      </>),
+      location: "ब्रह्मसिद्धेश्वर मंदिर सावरगाव",
+      description: ""
     }
   ];
 
@@ -30,6 +47,7 @@ const HomePage = () => {
     <div className="home-page">
       <Header />
       <main>
+        {/* HERO */}
         <section className="hero-section" style={{ backgroundImage: `url(${HomeHeroImage})` }}>
           <div className="hero-content">
             <h1>वीरशैव लिंगायत गवळी समाज, अहिल्यानगर</h1>
@@ -42,17 +60,20 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* Today's Message */}
         <section className="message-section">
           <h2>🙏 आजचा सुविचार</h2>
           <p>"समाजाची सेवा हीच खरी ईश्वरसेवा."</p>
         </section>
 
+         {/* Trust */}
         <section className="trust-section">
           <h2>🛕 ब्रह्मसिद्धेश्वर ट्रस्ट</h2>
           <p>सावरगाव ट्रस्ट समाजाच्या धार्मिक, सांस्कृतिक व सामाजिक कार्यासाठी समर्पित आहे.</p>
           <Link to="/about" className="trust-btn">अधिक माहिती</Link>
         </section>
 
+        {/* Events */}
         <section className="home-section">
           <div className="section-header">
             <h2>📅 आगामी कार्यक्रम</h2>
@@ -81,75 +102,49 @@ const HomePage = () => {
         </section>
 
             {/* Latest News
-
         <section className="home-section">
-
           <div className="section-header">
-
             <h2><img  className="newsicon" alt="" src={Newspaper}/> नवीन बातम्या</h2>
-
             <Link to="/events">
-
               सर्व पहा →
-
             </Link>
-
           </div>
-
           <div className="card-grid">
-
             {latestNews.map((news, index) => (
-
               <div
                 key={index}
                 className="home-card"
               >
-
                 <h3>{news.title}</h3>
-
                 <span>{news.date}</span>
-
               </div>
-
             ))}
-
           </div>
-
         </section> */}
 
          {/* Gallery */}
-
         {/* <section className="gallery-preview"> */}
-
           {/* <h2>
-
             📷 फोटो गॅलरी
-
           </h2>
-
           <p>
-
             समाजातील कार्यक्रमांचे फोटो पाहा.
-
           </p> */}
-
           {/* <Link
             to="/gallery"
             className="trust-btn"
           >
-
             गॅलरी पहा
-
           </Link> */}
-
         {/* </section> */}
      
+        {/* Quick Aarti */}
         <section className="home-section">
           <h2>🙏 दैनंदिन आरती</h2>
           <div className="aarti-buttons">
-            <Link to="/aartis">श्री गणपती आरती</Link>
-            <Link to="/aartis">श्री सिदाजी आप्पा</Link>
-            <Link to="/aartis">श्री शंकराची आरती</Link>
+            <Link to="/aartis?id=1">श्री गणपती आरती</Link>
+            <Link to="/aartis?id=5">श्री सिदाजी आप्पा आरती</Link>
+            <Link to="/aartis?id=2">श्री शंकराची आरती</Link>
           </div>
         </section>
       </main>

@@ -419,111 +419,117 @@
 
 }
 
-/* =========================
-   FILTER SECTION
-========================= */
-
-.filter-section,
-.date-filter {
-  max-width: 1200px;
-  margin: 25px auto;
-  padding: 0 20px;
+/* Filter Section Container */
+.filter-section {
+    padding: 15px 10px 5px;
+    background-color: #fff;
+    text-align: center;
 }
 
-.filter-section h3,
-.date-filter h3 {
-  color: #8B1E3F;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
-  font-weight: 700;
+.filter-section h3 {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Category Buttons */
-
+/* Category Filters - Horizontal Scroll on Mobile */
 .category-filters {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable horizontal scroll */
+    padding: 5px 10px 15px;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar IE */
+    justify-content: flex-start;
+}
+
+.category-filters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
 }
 
 .filter-btn {
-  border: none;
-  background: #f2f2f2;
-  color: #555;
-  padding: 10px 20px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: .3s;
-  font-size: 15px;
-}
-
-.filter-btn:hover {
-  background: #F4A300;
-  color: white;
+    flex: 0 0 auto; /* Prevent shrinking */
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    background: #f9f9f9;
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .filter-btn.active {
-  background: #8B1E3F;
-  color: white;
-  font-weight: 600;
+    background-color: #d32f2f;
+    color: white;
+    border-color: #d32f2f;
+    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
 }
 
-/* Date Filters */
-
-.date-filter-row {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  align-items: center;
+/* Date Filter Section */
+.date-filter {
+    background-color: #fff;
+    padding: 0 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  min-width: 180px;
+.date-selectors {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for selects */
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.filter-group label {
-  margin-bottom: 6px;
-  color: #444;
-  font-weight: 600;
-  font-size: 14px;
+.date-selectors select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
 }
 
-.filter-group select,
-.filter-group input {
-  padding: 11px 14px;
-  border: 1px solid #d8d8d8;
-  border-radius: 10px;
-  background: white;
-  font-size: 15px;
-  transition: .3s;
-}
-
-.filter-group select:focus,
-.filter-group input:focus {
-  outline: none;
-  border-color: #F4A300;
-  box-shadow: 0 0 0 3px rgba(244,163,0,.15);
-}
-
-/* Reset Button */
-
+/* Clear Button - Spans full width on mobile */
 .clear-filter-btn {
-  margin-top: 26px;
-  padding: 11px 22px;
-  border: none;
-  border-radius: 10px;
-  background: #8B1E3F;
-  color: white;
-  cursor: pointer;
-  transition: .3s;
-  font-weight: 600;
+    grid-column: span 2;
+    padding: 10px;
+    background: none;
+    border: 1px dashed #d32f2f;
+    color: #d32f2f;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 .clear-filter-btn:hover {
-  background: #6e1531;
+    background-color: #fdf2f2;
 }
+
+/* Responsive Desktop Tweak */
+@media (min-width: 768px) {
+    .category-filters {
+        justify-content: center; /* Center filters on big screens */
+        overflow-x: visible;
+    }
+    
+    .date-selectors {
+        grid-template-columns: 150px 150px 120px; /* Inline on desktop */
+        justify-content: center;
+    }
+    
+    .clear-filter-btn {
+        grid-column: auto;
+        margin-top: 0;
+    }
+}
+
+
 
 /* =========================
    FEATURED NEWS
