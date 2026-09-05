@@ -4,23 +4,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EventBannerImage from "../assets/images/event-banner.jpg";
 import TempleImg2 from "../assets/images/TempleImg2.png";
-import TempleImg3 from "../assets/images/TempleImg3.jpg";
 import "../assets/styles/EventsPage.css";
 
 const newsData = [
-  {
-    id: 1,
-    title: "गादीपूजा आणि भंडारा",
-    date: "2026-08-31",
-    category: "कार्यक्रम",
-    featured: false,
-    image: TempleImg3,
-    summary: "गादीपूजा आणि भंडारा कार्यक्रमाचे आयोजन.",
-    content:
-      "सावरगाव येथील ब्रह्मसिद्धेश्वर मंदिरात वार्षिक गादीपूजा व महाप्रसाद सोहळा आयोजित केला आहे. समाज बांधवांनी दर्शनाचा लाभ घ्यावा.",
-    contributors: ["सर्व समाज बांधव"],
-    additionalImages: []
-  },
+  
   {
     id: 2,
     title: "बीज उत्सव",

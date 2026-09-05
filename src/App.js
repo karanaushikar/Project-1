@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import AartiGalleryPage from './pages/AartiGalleryPage';
 import AboutUsPage from './pages/AboutUsPage';
 import EventsPage from './pages/EventsPage';
-import TrustMember from './pages/TrustMembers';
+// import TrustMember from './pages/TrustMembers';
 import ScrollToTop from './components/ScrollToTop';
 import SamajInfoPage from './pages/SamajInfoPage';
 import Contributor from './pages/Contributors';
@@ -22,7 +22,7 @@ function App() {
           <Route path="/about" element={<AboutUsPage />} />
           <Route path="/samaj-history" element={<SamajInfoPage/>} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/TrustMembers" element={<TrustMember/>}/>
+          {/* <Route path="/TrustMembers" element={<TrustMember/>}/> */}
           <Route path="/Contributor" element={<Contributor/>}/>
           {/* Add a catch-all route for 404 if needed */}
           {/* <Route path="*" element={<div>404 Not Found</div>} /> */}

@@ -16,14 +16,7 @@ const HomePage = () => {
   // ];
 
   const upcomingEvents = [
-    {
-      id: 1, // Matches ID in EventsPage
-      title: "गादीपूजा आणि भंडारा",
-      day: "३१",
-      month: "ऑगस्ट",
-      location: "ब्रह्मसिद्धेश्वर मंदिर सावरगाव",
-      description: ""
-    },
+    
     {
       id: 2, // Matches ID in EventsPage
       title: "बीज उत्सव",

@@ -70,9 +70,9 @@ const Header = () => {
                         🙏 आरती
                     </Link>
 
-                    <Link to="/TrustMembers" onClick={closeMenu}>
+                    {/* <Link to="/TrustMembers" onClick={closeMenu}>
                         👤 ट्रस्ट कार्यकारिणी
-                    </Link>
+                    </Link> */}
 
                     <Link to="/Contributor" onClick={closeMenu}>
                         🤝 विशेष योगदान
